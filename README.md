@@ -1,6 +1,6 @@
 <p align="center"><img src="https://hips.com/logo.svg"></p>
 
-#Magento 2.x setup instructions
+# Magento 2.x setup instructions
 
 1. Download our latest Magento 2.x Checkout module [here](https://github.com/hipspay/magento-2.x-checkout-module/releases).
 2. Extract [Hips.M2.v1.0.zip](https://static.hips.com/plugins/magento/Hips.M2.v1.0.zip). Upload the app folder to your Magento root directory using a FTP client. 
