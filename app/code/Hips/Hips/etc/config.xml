@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
+    <default>
+        <payment>
+            <fullpay>
+                <active>1</active>
+                <model>Hips\Hips\Model\Fullpay</model>
+                <title>Hips Checkout</title>
+                <public_key></public_key>
+                <private_key></private_key>
+                <payment_action>authorize</payment_action>
+                <hips_style></hips_style>
+                <shipping_title>Hips Shipping</shipping_title>
+                <price>10.00</price>
+            </fullpay>
+        </payment>
+        <carriers>
+            <hips_shipping>
+                <active>1</active>
+                <sallowspecific>0</sallowspecific>
+                <model>Hips\Hips\Model\Carrier\Hipsshipping</model>
+                <name>Hips Shipping</name>
+                <price>0.00</price>
+                <title>Hips Shipping</title>
+                <specificerrmsg>This shipping method is not available. To use this shipping method, please contact us.</specificerrmsg>
+            </hips_shipping>
+        </carriers>
+    </default>
+</config>

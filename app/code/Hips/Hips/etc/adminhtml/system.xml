@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="payment">
+            <group id="fullpay" translate="label" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Hips Checkout</label>
+                <field id="active" translate="label comment" sortOrder="1" type="select" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="title" translate="label comment" sortOrder="2" type="text" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Title</label>
+                </field>
+                <field id="public_key" translate="label comment" sortOrder="3" type="text" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Public Key</label>
+                </field>
+                <field id="private_key" translate="label comment" sortOrder="4" type="text" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Private Key</label>
+                </field>
+                <field id="payment_action" translate="label comment" sortOrder="5" type="select" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Fulfill Order</label>
+                    <source_model>Hips\Hips\Model\Config\Source\FulfillType</source_model>
+                </field>
+                <field id="hips_style" translate="label comment" sortOrder="6" type="textarea" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Style</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

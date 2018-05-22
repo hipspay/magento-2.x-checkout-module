@@ -1,0 +1,26 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+/**
+ * @var $block Hips\Hips\Block\Onepage
+ */
+?>
+<div><?php echo $block->getHtmlSnippet();  ?></div>
+<div class="hips-wrap">
+    <div class="hips-inner-wrap">
+        <script src="https://cdn.hips.com/js/v1/hips.js"></script>
+        <script>
+            Hips.checkout({
+                token: '<?php echo $block->getToken();  ?>'
+            });
+        </script>
+
+    </div>
+</div>
