@@ -2,19 +2,36 @@
 
 # Magento 2.x setup instructions
 
-1. Download our latest Magento 2.x Checkout module [here](https://github.com/hipspay/magento-2.x-checkout-module/releases).
-2. Extract [Hips.M2.v1.0.zip](https://static.hips.com/plugins/magento/Hips.M2.v1.0.zip). Upload the app folder to your Magento root directory using a FTP client. 
-3. Log into the admin panel and navigate to the Cache Management page (System → Cache Management), selecting all caches, clicking "disable" from the drop- down menu, and submitting the change. Or by running the command `php bin/magento cache:disable` from your magento root directory in command line.
-4. Navigate to your Magento 2 root directory using `cd` in command line. Enter the following at the command line
-5. Enable Magento Cache through System → Cache Management or run command `php bin/magento cache:enable` from your magento root directory. 
-6. Go to Stores → Configuration, and to Sales → Payment Method.
-7. Click on Other Payment Methods and Hips Checkout.
-8. Enter your **Public API Key** (will be found <a href="https://dashboard.hips.com/sales_channels" target="_blank">here</a>).
-9. Enter your **Private API Key** (will be found <a href="https://dashboard.hips.com/sales_channels" target="_blank">here</a>).
-10. Save your settings.
-11. Configure your shipping methods (will be found <a href="https://dashboard.hips.com/shippings" target="_blank">here</a>).
-12. ==All done!==
-13. (**optional**) If you want to accept Paypal, Invoice etc you may do that by <a href="https://dashboard.hips.com/payment/settings" target="_blank">connecting those to your HIPS account</a>
+### 1. 
+Download our latest Magento 2.x Checkout module [here](https://github.com/hipspay/magento-2.x-checkout-module/releases).
+### 2. 
+Extract [Hips.M2.v1.0.zip](https://static.hips.com/plugins/magento/Hips.M2.v1.0.zip). Upload the app folder to your Magento root directory using a FTP client. 
+### 3. 
+Log into the admin panel and navigate to the Cache Management page (System → Cache Management), selecting all caches, clicking "disable" from the drop- down menu, and submitting the change. Or by running the command `php bin/magento cache:disable` from your magento root directory in command line.
+### 4. 
+Navigate to your Magento 2 root directory using `cd` in command line. Enter the following at the command line:
+```bash
+php bin/magento setup:upgrade  
+php bin/magento setup:di:compile  
+php bin/magento setup:static-content:deploy
+```
+### 5. 
+Enable Magento Cache through System → Cache Management or run command `php bin/magento cache:enable` from your magento root directory. 
+### 6. 
+Go to Stores → Configuration, and to Sales → Payment Method.
+### 7. 
+Click on Other Payment Methods and Hips Checkout.
+### 8. 
+Enter your **Public API Key** (will be found <a href="https://dashboard.hips.com/sales_channels" target="_blank">here</a>).
+### 9. 
+Enter your **Private API Key** (will be found <a href="https://dashboard.hips.com/sales_channels" target="_blank">here</a>).
+### 10. 
+Save your settings.
+### 11. 
+Configure your shipping methods (will be found <a href="https://dashboard.hips.com/shippings" target="_blank">here</a>).
+### 12. ==All done!==
+### 13. (**optional**) 
+If you want to accept Paypal, Invoice etc you may do that by <a href="https://dashboard.hips.com/payment/settings" target="_blank">connecting those to your HIPS account</a>
 
 
 ## Contributing
